@@ -9,7 +9,7 @@ public class DemoController {
 	
 	@RequestMapping("en")
 	public String sayHello() {
-		return "index";
+		return "hello";
 		
 	}
 }
