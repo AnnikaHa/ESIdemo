@@ -12,4 +12,9 @@ public class DemoController {
 		return "hello";
 		
 	}
+	
+	@RequestMapping("home")
+	public String index() {
+		return "index";
+	}
 }
