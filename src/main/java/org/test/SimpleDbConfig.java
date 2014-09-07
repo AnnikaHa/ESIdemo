@@ -15,6 +15,7 @@ public class SimpleDbConfig {
 
 	@Bean
 	public DataSource dataSource() {
+		
 		URI dbUri;
         try {
         	String username = "postgres";

@@ -2,6 +2,7 @@ package org.test.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -18,7 +19,7 @@ public class Plant {
 
 	
 	@Id 
-	@GeneratedValue
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	Long id;
 
 	String name;

@@ -30,6 +30,6 @@ public class MyController {
 	public String create(Plant plant){
 	    repo.saveAndFlush(plant);
 	    return "redirect:/plants";
-	}
+	}  
 
 }
