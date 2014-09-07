@@ -7,5 +7,4 @@ import org.test.models.Plant;
 @Repository
 public interface PlantRepository extends JpaRepository<Plant, Long> {
 
-	
 }

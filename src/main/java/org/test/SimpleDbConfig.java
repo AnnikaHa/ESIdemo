@@ -21,7 +21,7 @@ public class SimpleDbConfig {
         	String username = "postgres";
             String password = "R66velRonja";
             String url = "jdbc:postgresql://localhost:5432/esi_database";
-            String dbProperty = System.getenv("postgres://gfpczuckdxlwjl:cQCUgORXxhiLGZKfh6KoMsA7BY@ec2-54-204-24-154.compute-1.amazonaws.com:5432/d4mj8ubqkcnbkr");
+            String dbProperty = System.getenv("DATABASE_URL");
             if(dbProperty != null) {
                 dbUri = new URI(dbProperty);
 
