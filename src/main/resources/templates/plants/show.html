@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Plant information</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
+</head>
+<body>
+
+<div class="container">
+<div class="panel panel-default">
+	<div class="panel-heading">Plant info</div>
+	<div class="panel-body">
+
+
+	<table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+                <td th:text="${plant.name}"></td>
+                <td th:text="${plant.description}"></td>
+                <td th:text="${plant.price}"></td>
+        </tbody>
+    </table>
+    
+    
+ 
+	</div>
+	</div>
+</div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

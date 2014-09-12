@@ -3,6 +3,7 @@ package org.test.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.test.models.Plant;
@@ -31,5 +32,25 @@ public class MyController {
 	    repo.saveAndFlush(plant);
 	    return "redirect:/plants";
 	}  
+	
+	
+	
+	@RequestMapping("/plants/{id}")
+	public String show(Model model, @PathVariable Long id){
+		model.addAttribute("plant", repo.getOne(id));
+		return "plants/show";
+	}
+
+	@RequestMapping("/plants/{id}/form")
+	public String edit(Model model, @PathVariable Long id){
+	  //TO COMPLETE
+		return "";
+	}
+
+	@RequestMapping(value="/plants/{id}", method=RequestMethod.PUT)
+	public String update(Plant plant, @PathVariable Long id){
+	  //TO COMPLETE
+		return "";
+	}
 
 }
