@@ -14,6 +14,12 @@ public class MyController {
 	
 	@Autowired
 	PlantRepository repo;
+	
+	@RequestMapping("")
+	public String index() {
+		return "index";
+	}
+	
 
 	@RequestMapping("/plants")
 	public String list(Model model){
@@ -43,14 +49,17 @@ public class MyController {
 
 	@RequestMapping("/plants/{id}/form")
 	public String edit(Model model, @PathVariable Long id){
-	  //TO COMPLETE
-		return "";
+		model.addAttribute("plant", repo.getOne(id));
+		return "plants/update";
 	}
 
 	@RequestMapping(value="/plants/{id}", method=RequestMethod.PUT)
 	public String update(Plant plant, @PathVariable Long id){
-	  //TO COMPLETE
-		return "";
+		repo.getOne(id).setName(plant.getName());
+		repo.getOne(id).setDescription(plant.getDescription());
+		repo.getOne(id).setPrice(plant.getPrice());
+		repo.saveAndFlush(repo.getOne(id));
+		return "redirect:/plants";
 	}
 
 }

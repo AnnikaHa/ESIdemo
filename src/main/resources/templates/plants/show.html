@@ -12,21 +12,24 @@
 	<div class="panel-heading">Plant info</div>
 	<div class="panel-body">
 
-
-	<table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-                <td th:text="${plant.name}"></td>
-                <td th:text="${plant.description}"></td>
-                <td th:text="${plant.price}"></td>
-        </tbody>
-    </table>
+	
+    <form class="form-horizontal" role="form" accept-charset="UTF-8" >
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label">Name</label>
+			<p class="form-control-static" th:text="${plant.name}"></p>
+      	</div>
+     	 <div class="form-group">
+        	<label for="name" class="col-sm-2 control-label">Description</label>
+        	<p class="form-control-static" th:text="${plant.description}"></p>
+      	</div>
+      	<div class="form-group">
+        	<label for="name" class="col-sm-2 control-label">Price</label>
+        	<p class="form-control-static" th:text="${plant.price}"></p>
+      	</div>  
+	</form>
+	
+	<form style ='float:left; margin-right: 10px' th:action="@{'/plants'}"><button class="btn btn-default" >Back</button></form>
+	<form style ='float:left' th:method="get" th:action="@{'/plants/'+${plant.id}+'/form'}"><button class="btn btn-default" type="submit">Edit</button></form>
     
     
  
