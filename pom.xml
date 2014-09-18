@@ -67,9 +67,27 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.3-1100-jdbc41</version>
 		</dependency>
-				
-	
-	
+
+
+
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-cypher-compiler-1.9</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>2.4.8</version>
+            <type>jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.springtestdbunit</groupId>
+            <artifactId>spring-test-dbunit</artifactId>
+            <version>1.1.0</version>
+        </dependency>
 	</dependencies>
 	
 
